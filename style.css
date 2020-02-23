@@ -23,8 +23,8 @@ body {
     height: 50px;
     border-radius: 50%;
     background-color: cadetblue;
-    animation: fly-ball-x 2s cubic-bezier(0.17, 0.67, 0.6, 1),
-        fly-ball-y 2s linear;
+    /* animation: fly-ball-x 2s cubic-bezier(0.17, 0.67, 0.6, 1),
+        fly-ball-y 2s linear; */
 }
 
 .column {
@@ -43,8 +43,8 @@ body {
     width: 17%;
     height: 20px;
     background-color: burlywood;
-    animation: spring 1.5s infinite alternate paused,
-        release-spring 2s infinite linear;
+    /* animation: spring 1.5s infinite alternate paused, */
+       
 }
 
 .panel {
@@ -99,8 +99,8 @@ body {
 }
 
 :root {
-    --spring-left: -14%;
-    --power-x: 300px;
+    --spring-left: 0;
+    --power-x: 0;
 }
 
 @keyframes fill {
