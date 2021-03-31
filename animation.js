@@ -4,10 +4,7 @@ const btn = document.querySelector(".btn-action");
 const spring = document.querySelector(".spring");
 const fill = document.querySelector(".fill");
 
-// console.log(ball, btn, spring, fill);
-
 const stretchSpring = () => {
-    // console.log("naciągamy");
     fill.style.animationName = "fill";
     fill.style.animationPlayState = "running";
     spring.style.animationPlayState = "running";
@@ -19,12 +16,10 @@ const stretchSpring = () => {
 };
 
 const releaseSpring = () => {
-    // console.log("puszczamy");
     const fillStyles = getComputedStyle(fill);
     const fillWidth = parseInt(fillStyles.width, 10);
     const barWidth = parseInt(getComputedStyle(bar).width, 10);
     const progressPercent = (fillWidth / barWidth).toFixed(2);
-    // console.log(progressPercent);
 
     btn.style.color = "black";
     btn.textContent = `Moc uderzenia to ${(progressPercent * 100).toFixed()}%`;
@@ -52,7 +47,6 @@ const releaseSpring = () => {
 };
 
 const resetAnimation = () => {
-    console.log("reset animacji");
     ball.removeEventListener("animationend", resetAnimation);
 
     setTimeout(() => {
